@@ -1,0 +1,9 @@
+#extArrowUp {
+    width: 48px;
+    height: 48px;
+    position: fixed;
+    top: 40px;
+    left: 40px;
+    cursor: pointer;
+    z-index: 999999999999999999;
+}

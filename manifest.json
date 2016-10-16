@@ -1,0 +1,33 @@
+{
+  "name": "ArrowUP",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "This extension add button arrow up for scroll page on top.",
+  "homepage_url": "http://google.com",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "scripts": [
+      "src/bg/background.js"
+    ],
+    "persistent": true
+  },
+  "page_action": {
+    "default_icon": "icons/icon16.png",
+    "default_title": "page action demo",
+    "default_popup": "src/page_action/page_action.html"
+  },
+  "content_scripts": [{
+    "matches": ["https://*/*", "http://*/*"],
+    "js": ["js/jq.js", "js/page.js"],
+    "css": ["css/page.css"]
+  }],
+  "web_accessible_resources": [
+    "icons/icon48.png",
+    "icons/icon_down48.png"
+  ]
+}
